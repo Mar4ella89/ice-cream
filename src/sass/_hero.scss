@@ -3,7 +3,7 @@
 
     @media screen and (max-width: 767px) {
         min-height: 392px;
-    } 
+    }
 }
 
 .hero {
@@ -11,7 +11,8 @@
     width: 100%;
     min-height: 502px;
     margin: 0 auto;
-    
+    overflow: hidden;
+
     background-color: #84A178;
 
     background-image: url(../images/hero/hero-mob/points-mob.png);
@@ -27,7 +28,7 @@
         background-size: 329px;
     }
 }
-   
+
 .hero__title {
     margin-bottom: 32px;
 
@@ -48,11 +49,20 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-47%);
-    pointer-events: none;
+    // pointer-events: none;
+    transition: transform .8s ease-in-out;
+
+    &:hover {
+        transform: translate(-47%, 10%);
+        overflow: hidden;
+    }
 }
 
 @media screen and (max-width: 767px) {
-    .hero__numb-list, .hero__text, .hero__arrow-btn {
+
+    .hero__numb-list,
+    .hero__text,
+    .hero__arrow-btn {
         display: none;
     }
 
@@ -75,7 +85,7 @@
     color: #000000;
 
     transition: border-color var(--transition-duration-and-funk),
-    color var(--transition-duration-and-funk);
+        color var(--transition-duration-and-funk);
 
     &:hover {
         border-color: var(--accent-color);
@@ -123,10 +133,18 @@
 
         background-image: url(../images/hero/hero-tab/points-tab.png);
         background-position: 50% 100%;
+        overflow: hidden;
     }
 
     .hero__ice-cream-img {
         left: 71%;
+
+        transition: transform .8s ease-in-out;
+
+        &:hover {
+            transform: translate(-57%, 10%);
+            overflow: hidden;
+        }
     }
 
     .hero__title {
@@ -154,7 +172,7 @@
         font-size: 28px;
         line-height: 1.2;
         letter-spacing: 0.04em;
-        color:#000000;
+        color: #000000;
     }
 
     .hero__numb-item {
@@ -172,6 +190,16 @@
         margin-bottom: 13px;
         margin-top: 28px;
         margin-right: 33px;
+
+        border-radius: 50%;
+        scale: 1;
+        transition: transform .8s ease-in-out, scale .8s ease-in-out;
+
+        &:hover {
+            transform-origin: center;
+            transform: rotate(180deg);
+            scale: 0.9;
+        }
     }
 
     .hero__pic-text-wrapper {
@@ -223,7 +251,7 @@
         min-height: 664px;
 
         background-image: url(../images/hero/hero-desk/points-desk.png);
-        
+
     }
 
     .hero__title {
@@ -255,6 +283,16 @@
         margin-bottom: 65px;
         margin-top: 42px;
         margin-right: 14px;
+
+        border-radius: 50%;
+        scale: 1;
+        transition: transform .8s ease-in-out, scale .8s ease-in-out;
+
+        &:hover {
+            transform-origin: center;
+            transform: rotate(180deg);
+            scale: 0.9;
+        }
     }
 
     .hero__text {
@@ -271,11 +309,11 @@
     .hero__products {
         padding: 12px 34px;
         margin-right: 34px;
-    
+
         font-size: 14px;
         line-height: 1.29;
     }
-    
+
     .hero__recipe {
         font-size: 14px;
         line-height: 1.2;
@@ -292,29 +330,26 @@
 }
 
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
 
-    
+
+
+
+
+
+
+
+
+
 
 //     .hero__text {
 //         margin-bottom: 20px;
