@@ -11,13 +11,14 @@
     width: 100%;
     min-height: 502px;
     margin: 0 auto;
-    overflow: hidden;
 
     background-color: #84A178;
 
     background-image: url(../images/hero/hero-mob/points-mob.png);
     background-repeat: no-repeat;
     background-position: 50% 100%;
+
+    overflow: hidden;
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
@@ -49,12 +50,10 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-47%);
-    // pointer-events: none;
-    transition: transform .8s ease-in-out;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover {
         transform: translate(-47%, 10%);
-        overflow: hidden;
     }
 }
 
@@ -68,6 +67,12 @@
 
     .hero__serving-img {
         display: none;
+    }
+
+    .hero__products,
+    .hero__recipe {
+        position: relative;
+        z-index: 100;
     }
 }
 
@@ -107,7 +112,10 @@
     font-weight: 600;
     color: #F8D24E;
     text-decoration: underline;
+    
     transition: color var(--transition-duration-and-funk);
+
+    
 
     &:hover {
         color: var(--accent-color);
@@ -133,18 +141,10 @@
 
         background-image: url(../images/hero/hero-tab/points-tab.png);
         background-position: 50% 100%;
-        overflow: hidden;
     }
 
     .hero__ice-cream-img {
         left: 71%;
-
-        transition: transform .8s ease-in-out;
-
-        &:hover {
-            transform: translate(-57%, 10%);
-            overflow: hidden;
-        }
     }
 
     .hero__title {
@@ -193,10 +193,9 @@
 
         border-radius: 50%;
         scale: 1;
-        transition: transform .8s ease-in-out, scale .8s ease-in-out;
+        transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), scale 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover {
-            transform-origin: center;
             transform: rotate(180deg);
             scale: 0.9;
         }
@@ -285,14 +284,6 @@
         margin-right: 14px;
 
         border-radius: 50%;
-        scale: 1;
-        transition: transform .8s ease-in-out, scale .8s ease-in-out;
-
-        &:hover {
-            transform-origin: center;
-            transform: rotate(180deg);
-            scale: 0.9;
-        }
     }
 
     .hero__text {
@@ -328,6 +319,9 @@
         background-size: 1200px;
     }
 }
+
+
+
 
 
 
